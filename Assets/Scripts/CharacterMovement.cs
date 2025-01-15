@@ -17,6 +17,12 @@ public class CharacterMovement : MonoBehaviour
 
     private NavMeshAgent _agent;
     private Animator _animator;
+    private bool _inQueue = true;
+
+    private void OnEnable()
+    {
+        EventManager.OnMoveQueue += MoveQueueHandler;
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,7 +30,7 @@ public class CharacterMovement : MonoBehaviour
         _agent = gameObject.GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
         //_agent.SetDestination(_waypoints[Random.Range(0, _waypoints.Length)].position);
-        StartCoroutine(ProcessQueueRoutine());
+        MoveQueueHandler();
 
     }
 
@@ -32,6 +38,8 @@ public class CharacterMovement : MonoBehaviour
     void Update()
     {
         _animator.SetFloat("Speed", _agent.velocity.magnitude);
+        //Debug.Log(gameObject.name + _agent.remainingDistance);
+
 
         /*        if (_numberInQueue == 0)
                 {
@@ -80,12 +88,27 @@ public class CharacterMovement : MonoBehaviour
         yield return new WaitForSeconds(_rewardDisplayTime);
         _reward.SetActive(false);
 
+        EventManager.MoveQueue();
+    }
 
+    private void MoveQueueHandler()
+    {
+        if (_inQueue)
+        {
+            _numberInQueue--;
+            Debug.Log(gameObject.name + _numberInQueue);
+            _agent.SetDestination(_queuePositions[_numberInQueue].position);
 
-        /*       
-           
-            
-                    move queue
-        */
+            if (_numberInQueue == 0)
+            {
+                _inQueue = false;
+            }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.LogWarning(gameObject.name + "trigger");
+        StartCoroutine(ProcessQueueRoutine());
     }
 }
