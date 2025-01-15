@@ -16,11 +16,13 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private int _numberInQueue = 0;
 
     private NavMeshAgent _agent;
+    private Animator _animator;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         _agent = gameObject.GetComponent<NavMeshAgent>();
+        _animator = GetComponent<Animator>();
         //_agent.SetDestination(_waypoints[Random.Range(0, _waypoints.Length)].position);
         StartCoroutine(ProcessQueueRoutine());
 
@@ -29,16 +31,19 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-/*        if (_numberInQueue == 0)
-        {
-            StartCoroutine(ProcessQueueRoutine());
-        }
+        _animator.SetFloat("Speed", _agent.velocity.magnitude);
 
-        if (_agent.remainingDistance < _agent.stoppingDistance)
-        {
-            StartCoroutine(NewMoveRoutine());
-        }
-*/    }
+        /*        if (_numberInQueue == 0)
+                {
+                    StartCoroutine(ProcessQueueRoutine());
+                }
+
+                if (_agent.remainingDistance < _agent.stoppingDistance)
+                {
+                    StartCoroutine(NewMoveRoutine());
+                }
+        */
+    }
 
     private IEnumerator NewMoveRoutine()
     {
