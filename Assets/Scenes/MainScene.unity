@@ -23392,6 +23392,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1298964954}
     m_Modifications:
+    - target: {fileID: 1704698767977460, guid: 2cf3791ad43b2b24f9a9b4e2c7687c9c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1857584694072278, guid: 2cf3791ad43b2b24f9a9b4e2c7687c9c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1903355279208026, guid: 2cf3791ad43b2b24f9a9b4e2c7687c9c, type: 3}
       propertyPath: m_Name
       value: SM_Chr_GangMember_Female_01 (3)
@@ -24945,6 +24953,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1298964954}
     m_Modifications:
+    - target: {fileID: 1235763595038284, guid: 2cf3791ad43b2b24f9a9b4e2c7687c9c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1816907087300242, guid: 2cf3791ad43b2b24f9a9b4e2c7687c9c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1857584694072278, guid: 2cf3791ad43b2b24f9a9b4e2c7687c9c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1903355279208026, guid: 2cf3791ad43b2b24f9a9b4e2c7687c9c, type: 3}
       propertyPath: m_Name
       value: SM_Chr_GangMember_Female_01 (2)
@@ -25597,6 +25617,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1298964954}
     m_Modifications:
+    - target: {fileID: 1077054589227018, guid: 2cf3791ad43b2b24f9a9b4e2c7687c9c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1857584694072278, guid: 2cf3791ad43b2b24f9a9b4e2c7687c9c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1903355279208026, guid: 2cf3791ad43b2b24f9a9b4e2c7687c9c, type: 3}
       propertyPath: m_Name
       value: SM_Chr_GangMember_Female_01 (4)
@@ -27457,6 +27485,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 454946921}
     m_Modifications:
+    - target: {fileID: 1856792319821110, guid: 2cf3791ad43b2b24f9a9b4e2c7687c9c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1857584694072278, guid: 2cf3791ad43b2b24f9a9b4e2c7687c9c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1903355279208026, guid: 2cf3791ad43b2b24f9a9b4e2c7687c9c, type: 3}
       propertyPath: m_Name
       value: SM_Chr_GangMember_Female_01 (5)
